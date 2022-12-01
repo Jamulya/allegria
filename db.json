@@ -16,6 +16,48 @@
             "review": [],
             "brand": "nike",
             "gender": "men"
-        }
+        },
+        {
+            "id": 2,
+            "title": "Nike Jordan Air",
+            "price": 150,
+            "category": "shoes",
+            "img": [
+              "./catalog/shoes/2_1.jpg",
+              "./catalog/shoes/2_2.jpg",
+              "./catalog/shoes/2_3.jpg",
+              "./catalog/shoes/2_4.jpg"
+            ],
+            "sizes": [
+              {
+                "id": 1,
+                "size": 38,
+                "inStock": 3
+              },
+              {
+                "id": 2,
+                "size": 39,
+                "inStock": 0
+              },
+              {
+                "id": 3,
+                "size": 40,
+                "inStock": 3
+              },
+              {
+                "id": 4,
+                "size": 41,
+                "inStock": 2
+              },
+              {
+                "id": 5,
+                "size": 42,
+                "inStock": 5
+              }
+            ],
+            "review": [],
+            "brand": "Nike",
+            "gender": "men"
+          }
     ]
 }

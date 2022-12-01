@@ -9,6 +9,7 @@ import About from "./pages/Home/About";
 import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 import './scss/style.scss'
+import './i18n'
 
 
 

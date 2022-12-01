@@ -1,8 +1,14 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
 
+    const {t, i18n} = useTranslation()
+
+    const changeLanguage = (lang) => {
+        i18n.changeLanguage(lang)
+    }
 
     return (
         <header className='header'>
@@ -23,18 +29,18 @@ const Header = () => {
                         </Link>
                     </h1>
                     <div className='header__menu'>
-                        <Link className='header__menu-link' to="/catalog">Женщины</Link>
-                        <Link className='header__menu-link' to="/catalog">Мужчины</Link>
-                        <Link className='header__menu-link' to="/about"> О нас</Link>
+                        <Link className='header__menu-link' to="/catalog">{t("header.link1")}</Link>
+                        <Link className='header__menu-link' to="/catalog">{t("header.link2")}</Link>
+                        <Link className='header__menu-link' to="/about"> {t("header.link3")}</Link>
                         <label htmlFor="" className='header__search'>
-                            <span className='header__search-text'>поиск</span>
+                            <span className='header__search-text'>{t("header.link4")}</span>
                             <input className='header__search-field' type="text"/>
                         </label>
                     </div>
                     <div className='header__right'>
                         <div className='header__lang'>
-                            <a className='header__lang-link' href="">RU</a>
-                            <a className='header__lang-link' href="">EN</a>
+                            <a className={`header__lang-link ${i18n.language === 'ru' ? 'active' : ''}`} onClick={() => changeLanguage('ru')} href="">RU</a>
+                            <a className={`header__lang-link ${i18n.language === 'en' ? 'active' : ''}`} onClick={() => changeLanguage('en')} href="">EN</a>
                         </div>
                         <div className='header__icons'>
                             <a href='' className='header__icons-link'>
